@@ -17,6 +17,7 @@ namespace Пр8
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Объявления кораблей
         private CargoShip ship1;
         private CargoShip ship2;
         
@@ -29,21 +30,25 @@ namespace Пр8
             ship2.Name = "2";
         }
 
+        //Кнопка информации
         private void btnInfo_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Разработчик: Кузнецов М.Н. ИСП-31 \nСоздать интерфейсы - корабль, грузовой транспорт. Создать класс грузовой корабль. Класс должен включать конструктор, функцию для формирования строки информации о корабле. Сравнение производить по грузоподъемности.");
         }
 
+        //Кнопка вывода информации о первом корабле
         private void btnOutput1_Click(object sender, RoutedEventArgs e)
         {
             Ship1.Text = ship1.GetInfo();
         }
 
+        //Кнопка вывода информации о втором корабле
         private void btnOutput2_Click(object sender, RoutedEventArgs e)
         {
             Ship2.Text = ship2.GetInfo();
         }
 
+        //Кнопка сравнения грузоподъемностей
         private void btnCompare_Click(object sender, RoutedEventArgs e)
         {
             if (ship1.CompareTo(ship2) < 0)
